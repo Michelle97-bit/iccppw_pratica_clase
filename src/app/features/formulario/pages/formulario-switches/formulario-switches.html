@@ -1,0 +1,62 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh; padding: 2rem 0;">
+  <div class="card shadow" style="width: 100%; max-width: 600px;">
+    <div class="card-header text-center bg-light">
+      <h4 class="mb-0 text-dark">Formularios: Switches y Opciones</h4>
+    </div>
+    <div class="card-body">
+
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()" autocomplete="off">
+
+        <!-- Selección de género -->
+        <div class="mb-3">
+          <label class="form-label">Género</label>
+          <div class="mt-2">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="masculino" value="M" formControlName="genero">
+              <label class="form-check-label" for="masculino">Masculino</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="femenino" value="F" formControlName="genero">
+              <label class="form-check-label" for="femenino">Femenino</label>
+            </div>
+          </div>
+          @if(formUtils.isValidField(myForm, 'genero')) {
+            <div class="form-text text-danger">
+              {{ formUtils.getFieldError(myForm, 'genero') }}
+            </div>
+          }
+        </div>
+
+        <!-- Notificaciones (Switch) -->
+        <div class="mb-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="notificaciones" formControlName="notificaciones">
+            <label class="form-check-label" for="notificaciones">Deseo recibir notificaciones</label>
+          </div>
+          <small class="form-text text-muted">Recibirás actualizaciones y novedades en tu email</small>
+        </div>
+
+        <!-- Aceptar condiciones (Checkbox obligatorio) -->
+        <div class="mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="condiciones" formControlName="condiciones">
+            <label class="form-check-label" for="condiciones">Acepto los términos y condiciones</label>
+          </div>
+          @if(formUtils.isValidField(myForm, 'condiciones')) {
+            <div class="form-text text-danger">
+              {{ formUtils.getFieldError(myForm, 'condiciones') }}
+            </div>
+          }
+          <small class="form-text text-muted">Es obligatorio aceptar los términos para continuar</small>
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

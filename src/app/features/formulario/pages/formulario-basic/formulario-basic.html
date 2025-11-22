@@ -1,0 +1,46 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh; padding: 2rem 0;">
+  <div class="card shadow" style="width: 100%; max-width: 500px;">
+    <div class="card-header text-center bg-light">
+      <h4 class="mb-0 text-dark">Formulario de Registro</h4>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input formControlName="nombre" class="form-control" placeholder="Ingrese su nombre">
+          @if(formUtils.isValidField(myForm, 'nombre')){
+            <div class="form-text text-danger">
+              {{ formUtils.getFieldError(myForm, 'nombre') }}
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Edad</label>
+          <input formControlName="edad" type="number" class="form-control" placeholder="Ingrese su edad">
+          @if(formUtils.isValidField(myForm, 'edad')){
+            <div class="form-text text-danger">
+              {{ formUtils.getFieldError(myForm, 'edad') }}
+            </div>
+          }
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Correo</label>
+          <input formControlName="correo" class="form-control" placeholder="ejemplo@correo.com">
+          @if(formUtils.isValidField(myForm, 'correo')){
+            <div class="form-text text-danger">
+              {{ formUtils.getFieldError(myForm, 'correo') }}
+            </div>
+          }
+        </div>
+
+        <div class="text-end">
+          <button class="btn btn-primary" type="submit">
+            Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

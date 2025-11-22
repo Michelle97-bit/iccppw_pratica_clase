@@ -1,0 +1,70 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh; padding: 2rem 0;">
+  <div class="card shadow" style="width: 100%; max-width: 700px;">
+    <div class="card-header text-center bg-light">
+      <h4 class="mb-0 text-dark">Perfil de {{ name() }}</h4>
+    </div>
+    <div class="card-body">
+
+      <!-- Información del perfil -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h5 class="text-center text-muted mb-3">Información Personal</h5>
+
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td class="fw-bold">Nombre:</td>
+                  <td>{{ name() }}</td>
+                </tr>
+
+                <tr>
+                  <td class="fw-bold">Apellido:</td>
+                  <td>{{ lastName() }}</td>
+                </tr>
+
+                <tr>
+                  <td class="fw-bold">Edad:</td>
+                  <td>{{ age() }} años</td>
+                </tr>
+
+                <tr>
+                  <td class="fw-bold">Nombre Completo:</td>
+                  <td>{{ getFullName() }}</td>
+                </tr>
+
+                <tr>
+                  <td class="fw-bold">Nombre y Apellido (Mayúsculas):</td>
+                  <td class="text-uppercase">
+                    {{ name().toUpperCase() + ' ' + lastName().toUpperCase() }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="row">
+        <div class="col-12">
+          <h6 class="text-center text-muted mb-3">Acciones</h6>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <button class="btn btn-outline-secondary" (click)="cambiarDatos()">
+              Cambiar datos
+            </button>
+
+            <button class="btn btn-outline-secondary" (click)="cambiarEdad()">
+              Cambiar edad
+            </button>
+
+            <button class="btn btn-outline-secondary" (click)="reset()">
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

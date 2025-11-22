@@ -1,0 +1,29 @@
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh; padding: 2rem 0;">
+  <div class="card shadow" style="width: 100%; max-width: 600px;">
+    <div class="card-header text-center bg-light">
+      <h4 class="mb-0 text-dark">Mi Primera Página</h4>
+    </div>
+    <div class="card-body text-center">
+      <h3 class="text-muted mb-4">Primer Componente</h3>
+
+      <div class="mb-4">
+        <h1 class="display-4 mb-3">Contador: {{ counter() }}</h1>
+        <h2 class="text-muted">Valor actual: {{ counter() }}</h2>
+      </div>
+
+      <div class="d-grid gap-2 col-8 mx-auto">
+        <button class="btn btn-outline-secondary" (click)="incrementar()">
+          Incrementar
+        </button>
+
+        <button class="btn btn-outline-secondary" (click)="decrementar()">
+          Decrementar
+        </button>
+
+        <button class="btn btn-outline-secondary" (click)="reset()">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
