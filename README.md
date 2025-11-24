@@ -66,5 +66,5 @@ Capturas de pantalla como evidencia del proceso de instalación y configuración
 
 ### 1. Instalación de Angular CLI y creación del proyecto:
 
-![alt text](assets/pnpm install.png)
+![alt text](assets/pnpm-install.png)
 
