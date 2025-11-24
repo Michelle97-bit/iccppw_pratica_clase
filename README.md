@@ -57,3 +57,14 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+
+## Resultados:
+
+Capturas de pantalla como evidencia del proceso de instalación y configuración de Angular, así como explicaciones detalladas de los componentes y formularios utilizados en la práctica.
+
+### 1. Instalación de Angular CLI y creación del proyecto:
+
+![alt text](assets/pnpm install.png)
+
