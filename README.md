@@ -123,7 +123,7 @@ ng new 01_fundamentos
 * En la pregunta si queremos usar `zoneless` respondemos que si, ya que Angular recomienda usar `zoneless` para mejorar el rendimiento en aplicaciones modernas y trabaja con señales asincrónicas de manera más eficiente.
 
 
-![Configuración ](assets/configuracion.png)
+![Configuración ](assets/creacion_proyecto.png)
 
 ### 4. Proyecto corriendo en el navegador:
 
