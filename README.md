@@ -68,3 +68,29 @@ Capturas de pantalla como evidencia del proceso de instalación y configuración
 
 ![alt text](assets/pnpm-install.png)
 
+
+**Descripción de la imagen:**
+
+En esta captura se muestra el proceso de instalación de Angular CLI versión 20.3.67 mediante el gestor de paquetes ppnpm (Node Package Manager). Los pasos realizados fueron:
+
+- **Comando ejecutado:** `pnpm install -g @angular/cli@20.3.67`
+  - El flag `-g` indica una instalación global, permitiendo usar Angular CLI desde cualquier ubicación del sistema.
+  - Se especifica la versión exacta `@20.3.67` para garantizar compatibilidad y reproducibilidad del entorno.
+
+- **Proceso de instalación:** Se observa la descarga de dependencias necesarias y la configuración del paquete en el sistema.
+
+- **Verificación:** Una vez completada la instalación, se puede verificar ejecutando:
+  ```bash
+  ng version
+  ```
+  Este comando muestra la versión instalada de Angular CLI y las dependencias del proyecto.
+
+
+
+### 2. Revision de configuracion de angular: 
+
+![alt text](assets/version.png)
+
+<!-- uso comando ng version -->
+**Descripción de la imagen:**
+En esta captura se muestra la salida del comando `ng version`, que proporciona información detallada sobre la configuración del entorno Angular. 
