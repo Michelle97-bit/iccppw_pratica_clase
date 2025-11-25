@@ -4,8 +4,19 @@ import { HomePage } from './features/home-page/home-page';
 import { FormularioBasic } from './features/formulario/pages/formulario-basic/formulario-basic';
 import { FormularioDinamico } from './features/formulario/pages/formulario-dinamico/formulario-dinamico';
 import { FormularioSwitches } from './features/formulario/pages/formulario-switches/formulario-switches';
+import { ProyectosPage } from './features/ProyectoPage/ProyectoPage';
+import { ProyectoDosPage } from './features/ProyectoDosPage/ProyectoDosPage';
 
 export const routes: Routes = [
+
+  {
+    path: 'proyectos-page',
+    component: ProyectosPage
+  },
+  {
+    path: 'proyecto-dos-page',
+    component: ProyectoDosPage
+  },
   {
     path: '',
     redirectTo: '/home',
@@ -32,6 +43,5 @@ export const routes: Routes = [
     path: 'formulario-switches',
     component : FormularioSwitches
   },
-
 
 ];
